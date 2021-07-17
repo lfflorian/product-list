@@ -1,6 +1,10 @@
-<div *ngIf="product">
-    <p>{{ product.Name }}</p>
-    <img [src]="product.ThumbnailURL" alt="">
-    <p> <strong>{{ product.Price }}</strong> </p>
-    <a [routerLink]="['/product', product.ProductID ]">View details</a>
-</div>
+<ng-container *ngIf="product">
+    <div class="content">
+        <img [src]="product.ThumbnailURL" alt="">
+        <div class="info">
+            <p>{{ product.Name }}</p>
+            <p><strong>${{ product.Price }}</strong></p>
+        </div>
+        <a [routerLink]="['/product', product.ProductID ]">View details</a>
+    </div>
+</ng-container>

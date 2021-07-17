@@ -1,0 +1,28 @@
+.container {
+    display: flex;
+}
+
+.cont {
+    margin: 40px;
+}
+
+.button {
+    margin: auto 0 auto auto;
+    border-radius: 15px;
+    background-color: rgb(145,213,104);
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.button-link {
+    color: red;
+}
+
+a {
+    display: block;
+    cursor: pointer;
+}
+.description {
+    width: 500px;
+}

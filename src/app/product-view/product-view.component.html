@@ -1,12 +1,27 @@
 <div *ngIf="product">
-    <p>{{ product.ProductID }}</p>
-    <p>{{ product.Name}}</p>
-    <p>{{ product.Price}}</p>
-    <p>{{ product.PictureURL}}</p>
-    <p>{{ product.Description}}</p>
-    <p>{{ product.Category}}</p>
-    <p>{{ product.Brand}}</p>
-    <p>{{ product.Color}}</p>
+    <div class="container">
+        <div class="cont">
+            <img [src]="product.PictureURL" alt="">
+        </div>
+        <div class="cont">
+            <p>{{ product.Name}}</p>
+            <p>{{ product.RatingAvg}}</p>
+            <p class="description">{{ product.Description}}</p>
+        </div>
+        <div class="cont">
+            <div>
+                <p>${{ product.Price}}</p>
+            </div>
+            <div>
+                <a class="button-link">out of stock</a>
+                <a class="button" (click)="addProduct()">add to Cart</a>
+            </div>
+        </div>
+    </div>
+    <div class="cont">
+        <p> <strong>Brand:</strong>  {{ product.Brand}}</p>
+        <p><strong>Color:</strong> {{ product.Color}}</p>
+    </div>
 </div>
-<app-modal></app-modal>
-<a (click)="addProduct()" >Add product</a>
+<!-- <app-modal></app-modal> -->
+
