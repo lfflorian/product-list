@@ -1,3 +1,5 @@
+$green: rgb(145,213,104);
+
 .container {
     display: flex;
 }
@@ -9,7 +11,7 @@
 .button {
     margin: auto 0 auto auto;
     border-radius: 15px;
-    background-color: rgb(145,213,104);
+    background-color: $green;
     padding: 20px;
     color: white;
     text-decoration: none;
@@ -25,4 +27,18 @@ a {
 }
 .description {
     width: 500px;
+}
+
+.modal {
+    position: absolute; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 90%; 
+    padding-top: 20px;
+    height: 60px; 
+    overflow: auto; 
+    background-color: $green;
+    color: white;
+    text-align: center;
 }

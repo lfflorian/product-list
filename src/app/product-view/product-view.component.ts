@@ -12,6 +12,8 @@ export class ProductViewComponent implements OnInit {
               private productService: ProductService) { }
 
   product : any;
+  modalMessage : string;
+  display: boolean = false;
 
   ngOnInit(): void {
     var id = this.route.snapshot.paramMap.get("productId")
@@ -20,7 +22,11 @@ export class ProductViewComponent implements OnInit {
     });
   }
 
-  addProduct() {
-    console.log("producto agregado")
+  show() {
+    this.modalMessage = "product added successfull!"
+    this.display = true;
+    setTimeout(() => {
+      this.display = false;
+    }, 3000);
   }
 }
