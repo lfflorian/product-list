@@ -1,0 +1,6 @@
+<div *ngIf="product">
+    <p>{{ product.Name }}</p>
+    <img [src]="product.ThumbnailURL" alt="">
+    <p> <strong>{{ product.Price }}</strong> </p>
+    <a [routerLink]="['/product', product.ProductID ]">View details</a>
+</div>

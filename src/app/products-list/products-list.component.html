@@ -1,8 +1,4 @@
 <h1>Product list</h1>
-
-<div *ngFor="let p of products">
-    <p>{{ p.Name }}</p>
-    <img [src]="p.ThumbnailURL" alt="">
-    <p> <strong>{{ p.Price }}</strong> </p>
-    <a [routerLink]="['/product', p.ProductID ]">View details</a>
+<div *ngFor="let product of products">
+    <app-product [product]="product"></app-product>
 </div>

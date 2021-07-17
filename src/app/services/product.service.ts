@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { find, filter } from 'rxjs/operators';
 import { product } from '../model/product';
 
 @Injectable({
@@ -13,7 +12,7 @@ export class ProductService {
     private http: HttpClient
   ) { }
 
-  getProducts() : Observable<any> {
-    return this.http.get('http://localhost:4200/assets/productList.json')
+  getProducts() : Observable<product[]> {
+    return this.http.get<product[]>('http://localhost:4200/assets/productList.json')
   } 
 }
