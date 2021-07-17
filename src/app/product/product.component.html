@@ -1,0 +1,12 @@
+<div *ngIf="product">
+    <p>{{ product.ProductID }}</p>
+    <p>{{ product.Name}}</p>
+    <p>{{ product.Price}}</p>
+    <p>{{ product.PictureURL}}</p>
+    <p>{{ product.Description}}</p>
+    <p>{{ product.Category}}</p>
+    <p>{{ product.Brand}}</p>
+    <p>{{ product.Color}}</p>
+</div>
+<app-modal></app-modal>
+<a (click)="addProduct()" >Add product</a>
